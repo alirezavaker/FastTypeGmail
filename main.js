@@ -9,8 +9,10 @@ if (eltype == "email") {
   el.addEventListener("keydown", function (event) {
     var code = event.keyCode || event.which;
     // Press Tab
-    if (code === 9) {
-        el.value += Email_extension;
+    if (!el.value == "") {   
+        if (code === 9) {
+            el.value += Email_extension;
+        }
     }
   });
 }
